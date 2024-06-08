@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SliderDirective } from './slider.directive';
 import { SliderComponent } from './components/slider/slider.component';
+import { HydrationFeatureKind } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
