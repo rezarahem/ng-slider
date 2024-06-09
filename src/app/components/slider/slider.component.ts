@@ -26,15 +26,15 @@ export class SliderComponent implements OnInit {
   currentIndex!: number;
 
   private intervalId: any;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
     this.currentIndex = this.images.length - 1;
 
-    if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId) && this.loop) {
       this.intervalId = setInterval(() => {
         this.previousSlide();
-        // console.log('Interval triggered');
       }, 1000 * this.loopInterval);
     }
   }
@@ -45,16 +45,9 @@ export class SliderComponent implements OnInit {
     }
   }
 
-  // if currentIndex = 3
-  // (case) increment => currnetIndex * 100 = 400 =>
-  // // 400 is greater than 300 so the slider goes right
-  // (case) decrement => currnetIndex * 100 = 200
-  // // 200 is smaller than 300 so the slider goes left
-  // how this works 👆
   get translationValue() {
     return `translateX(${this.currentIndex * 100}%)`;
   }
-
   get calHeightValue() {
     if (!this.heightInPx) {
       return '100%';
@@ -62,7 +55,6 @@ export class SliderComponent implements OnInit {
       return `${this.heightInPx}px`;
     }
   }
-
   get calWidthValue() {
     return `${this.widthInPx}px`;
   }

@@ -1,6 +1,11 @@
 <div class="c">
+  <app-slider
+    class="slider"
+    [images]="images"
+    [loop]="false"
+    [heightInPx]="400"
+  />
   <!-- <div [images-slider-directive]="images"></div> -->
-  <app-slider [images]="images" />
 </div>
 
 <router-outlet />

@@ -77,19 +77,19 @@
 }
 
 .right {
-  right: 1rem;
+  // right: 1rem;
+  left: 4rem;
 }
 
 .left {
-  // left: 1rem;
-  right: 4rem;
+  left: 1rem;
   padding-right: 7px;
 }
 
 .dots {
   position: absolute;
   bottom: 1rem;
-  left: 1rem;
+  right: 1rem;
   display: flex;
   gap: 1rem;
   align-items: center;
