@@ -1,14 +1,23 @@
-import { Component, NgModule, OnDestroy, OnInit, effect } from '@angular/core';
+import {
+  Component,
+  NO_ERRORS_SCHEMA,
+  NgModule,
+  OnDestroy,
+  OnInit,
+  effect,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SliderDirective } from './slider.directive';
 import { SliderComponent } from './components/slider/slider.component';
+import { SliderV2Directive } from './slider-v2.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SliderDirective, SliderComponent],
+  imports: [RouterOutlet, SliderDirective, SliderComponent, SliderV2Directive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppComponent {
   images = [

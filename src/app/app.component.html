@@ -1,11 +1,33 @@
 <div class="c">
-  <app-slider
-    class="slider"
-    [images]="images"
+  <!-- <app-slider [images]="images" [heightInPx]="500" /> -->
+  <!-- <div
+    images-slider-directive
+    [imagesFromDirective]="images"
+    [loopInterval]="1"
     [loop]="false"
     [heightInPx]="400"
-  />
-  <!-- <div [images-slider-directive]="images"></div> -->
+    [widthInPx]="800"
+  ></div> -->
+  <div id="directive" *appCarousel="images">
+    <div id="slider" class="slider">
+      <div id="wrapper" class="wrapper">
+        @for (image of images; track image) {
+        <div id="slide" class="slide">
+          <img
+            id="image"
+            class="image"
+            draggable="false"
+            [src]="image"
+            alt="{{ image }}"
+          />
+        </div>
+        }
+      </div>
+
+      <!-- <div id="buttons"></div>
+      <div id="dots"></div> -->
+    </div>
+  </div>
 </div>
 
 <router-outlet />
