@@ -56,34 +56,34 @@ svg {
   left: 0;
 }
 
-.bullets {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  z-index: 1;
-}
+// .bullets {
+//   position: absolute;
+//   bottom: 1rem;
+//   right: 1rem;
+//   display: flex;
+//   gap: 1rem;
+//   align-items: center;
+//   z-index: 1;
+// }
 
-$bullet-size: 12px;
-.bullet {
-  height: $bullet-size;
-  width: $bullet-size;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  border: none;
-  padding: 0 5px;
-  cursor: pointer;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  transition: background-color 0.3s ease, border-radius 0.3s ease,
-    padding 0.3s ease;
-}
+// $bullet-size: 12px;
+// .bullet {
+//   height: $bullet-size;
+//   width: $bullet-size;
+//   background-color: white;
+//   border-radius: 50%;
+//   display: inline-block;
+//   border: none;
+//   padding: 0 5px;
+//   cursor: pointer;
+//   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+//   transition: background-color 0.3s ease, border-radius 0.3s ease,
+//     padding 0.3s ease;
+// }
 
-.bullet-active {
-  background-color: #35b5ff;
-  border-radius: calc($bullet-size - 2px);
-  padding: 0 calc($bullet-size - 2px);
-  cursor: default;
-}
+// .bullet-active {
+//   background-color: #35b5ff;
+//   border-radius: calc($bullet-size - 2px);
+//   padding: 0 calc($bullet-size - 2px);
+//   cursor: default;
+// }

@@ -1,6 +1,6 @@
 import {
   Component,
-  CUSTOM_ELEMENTS_SCHEMA,
+  // CUSTOM_ELEMENTS_SCHEMA,
   Input,
   OnInit,
   ViewChild,
@@ -16,7 +16,7 @@ import { NgClass } from '@angular/common';
   selector: 'app-swiper-slider',
   standalone: true,
   imports: [NgClass],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './swiper-slider.component.html',
   styleUrl: './swiper-slider.component.scss',
 })
@@ -34,24 +34,18 @@ export class SwiperSliderComponent implements OnInit {
       spaceBetween: 5,
       grabCursor: true,
       loop: true,
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         nextEl: '.next-btn',
         prevEl: '.prev-btn',
       },
       pagination: {
         el: '.swiper-pagination',
-        dynamicBullets: true,
         clickable: true,
-        // dynamicMainBullets: true,
       },
       modules: [Navigation, Pagination],
     });
-  }
-
-  slideTo(index: number) {
-    this.swiper.slideTo(index);
   }
 }
