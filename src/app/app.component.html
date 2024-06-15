@@ -1,6 +1,6 @@
-<div class="c">
-  <!-- <app-slider [images]="images" [heightInPx]="500" /> -->
-  <!-- <div
+<!-- <div class="c"> -->
+<!-- <app-slider [images]="images" /> -->
+<!-- <div
     images-slider-directive
     [imagesFromDirective]="images"
     [loopInterval]="1"
@@ -8,7 +8,7 @@
     [heightInPx]="400"
     [widthInPx]="800"
   ></div> -->
-  <div id="directive" *appCarousel="images">
+<!-- <div id="directive" *appCarousel="images">
     <div id="slider" class="slider">
       <div id="wrapper" class="wrapper">
         @for (image of images; track image) {
@@ -24,10 +24,14 @@
         }
       </div>
 
-      <!-- <div id="buttons"></div>
-      <div id="dots"></div> -->
+      <div id="buttons"></div>
+      <div id="dots"></div>
     </div>
-  </div>
+  </div> -->
+<!-- </div> -->
+
+<div class="c">
+  <app-swiper-slider [images]="images" />
 </div>
 
 <router-outlet />
