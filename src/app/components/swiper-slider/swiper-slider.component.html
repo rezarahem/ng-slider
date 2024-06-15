@@ -7,7 +7,33 @@
     }
   </div>
 
-  <button class="next-btn navigation-r">&#11208;</button>
-  <button class="prev-btn navigation-l">&#11207;</button>
-  <!-- <button class="btnp l">prev</button> -->
+  <div class="buttons">
+    <button class="next-btn navigation-r">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+        />
+      </svg>
+    </button>
+    <button class="prev-btn navigation-l">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="bullets">
+    @for (image of images; track $index) {
+    <button
+      (click)="slideTo($index)"
+      class="bullet"
+      [ngClass]="{ 'bullet-active': $index === swiper.activeIndex }"
+    ></button>
+    }
+  </div>
 </div>

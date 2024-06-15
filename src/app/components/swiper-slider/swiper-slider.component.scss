@@ -1,9 +1,13 @@
+svg {
+  fill: white;
+  height: 32px;
+  width: 32px;
+}
+
 .swiper {
-  border: 2px gray solid;
   position: relative;
   height: 100%;
   width: 100%;
-  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -29,20 +33,20 @@
 .navigation-l {
   border: none;
   margin: 0;
-  padding: 100% 50px;
+  height: 100%;
+  width: 150px;
   cursor: pointer;
   background-color: transparent;
-  color: white;
-  font-size: 2rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation-r {
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
-  display: flex;
-  justify-content: space-between;
-  z-index: 10;
 }
 
 .navigation-l {
@@ -50,7 +54,36 @@
   transform: translateY(-50%);
   top: 50%;
   left: 0;
+}
+
+.bullets {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   display: flex;
-  justify-content: space-between;
-  z-index: 10;
+  gap: 1rem;
+  align-items: center;
+  z-index: 1;
+}
+
+$bullet-size: 12px;
+.bullet {
+  height: $bullet-size;
+  width: $bullet-size;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+  padding: 0 5px;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease,
+    padding 0.3s ease;
+}
+
+.bullet-active {
+  background-color: #35b5ff;
+  border-radius: calc($bullet-size - 2px);
+  padding: 0 calc($bullet-size - 2px);
+  cursor: default;
 }
